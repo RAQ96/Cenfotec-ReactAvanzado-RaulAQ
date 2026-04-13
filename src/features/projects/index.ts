@@ -1,1 +1,1 @@
-// TO DO
+export { Projects } from './page';

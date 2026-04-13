@@ -2,66 +2,52 @@ import {
   createContext,
   useContext,
   useState,
-  Children,
-  cloneElement,
+  type ReactNode
 } from "react";
-import type { ReactNode, ReactElement, FC } from "react";
 
-type TabsContextType = {
+// Interfaces definition
+interface TabsContextType {
   activeId: string | null;
   setActiveId: (id: string) => void;
 };
-
 const TabsContext = createContext<TabsContextType | null>(null);
 
-type TabsProps = {
+interface TabsProps {
   children: ReactNode;
-  defaultId?: string;
+  defaultId: string;
 };
 
-export const Tabs: FC<TabsProps> & {
-  Header: typeof Header;
-  Tab: typeof Tab;
-  Content: typeof Content;
-} = ({ children, defaultId }) => {
-  let firstTabId: string | null = null;
-  Children.forEach(children, (child: any) => {
-    if (child?.type?.displayName === "Tabs.Header") {
-      Children.forEach(child.props.children, (tabChild: any) => {
-        if (!firstTabId && tabChild?.props?.id) {
-          firstTabId = tabChild.props.id;
-        }
-      });
-    }
-  });
-  const [activeId, setActiveId] = useState<string | null>(defaultId || firstTabId);
+interface HeaderProps {
+  children: ReactNode;
+};
 
+interface TabProps {
+  id: string;
+  children: ReactNode;
+};
+
+type ContentProps = {
+  id: string;
+  children: ReactNode;
+};
+
+function Tabs({ children, defaultId }: TabsProps) {
+  const [activeId, setActiveId] = useState<string>(defaultId);
+  
   return (
     <TabsContext.Provider value={{ activeId, setActiveId }}>
       <div className="w-full">{children}</div>
     </TabsContext.Provider>
   );
-};
-
-type HeaderProps = {
-  children: ReactNode;
-};
+}
 
 function Header({ children }: HeaderProps) {
   return (
     <div className="flex border-b mb-4">
-      {Children.map(children, (child) =>
-        cloneElement(child as ReactElement<any>, { ...((child as ReactElement<any>).props) })
-      )}
+      {children}
     </div>
   );
 }
-Header.displayName = "Tabs.Header";
-
-type TabProps = {
-  id: string;
-  children: ReactNode;
-};
 
 function Tab({ id, children }: TabProps) {
   const context = useContext(TabsContext);
@@ -82,12 +68,6 @@ function Tab({ id, children }: TabProps) {
     </button>
   );
 }
-Tab.displayName = "Tabs.Tab";
-
-type ContentProps = {
-  id: string;
-  children: ReactNode;
-};
 
 function Content({ id, children }: ContentProps) {
   const context = useContext(TabsContext);
@@ -96,10 +76,9 @@ function Content({ id, children }: ContentProps) {
   if (activeId !== id) return null;
   return <div className="p-4 text-gray-700">{children}</div>;
 }
-Content.displayName = "Tabs.Content";
 
 Tabs.Header = Header;
 Tabs.Tab = Tab;
 Tabs.Content = Content;
 
-export default Tabs;
+export { Tabs };

@@ -4,7 +4,7 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-export default function Layout({ children } : LayoutProps) {
+export function Layout({ children } : LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <header className="bg-blue-600 text-white py-4 px-8 shadow text-center">
