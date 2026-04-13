@@ -10,3 +10,6 @@
 - Para el punto 4, se implementa el ProjectCardContainer y ProjectCardView. 
 - Para el punto 6 se implementa el Tabs.
 - Para el Bonus se implementa el Modal y el variant en el Button.
+
+## Vista actual del proyecto
+![alt text](captures/1.png)
