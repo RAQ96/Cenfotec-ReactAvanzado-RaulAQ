@@ -1,0 +1,38 @@
+[
+  {
+    "projectId": "1",
+    "id": "1",
+    "title": "Diseñar wireframes",
+    "priority": "Alta",
+    "label": "UX",
+    "assignee": "Ana",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "1",
+    "id": "2",
+    "title": "Configurar base de datos",
+    "priority": "Media",
+    "label": "Backend",
+    "assignee": "Luis",
+    "status": "En progreso"
+  },
+  {
+    "projectId": "1",
+    "id": "3",
+    "title": "Revisar endpoints",
+    "priority": "Baja",
+    "label": "API",
+    "assignee": "Sofía",
+    "status": "En revisión"
+  },
+  {
+    "projectId": "1",
+    "id": "4",
+    "title": "Deploy inicial",
+    "priority": "Alta",
+    "label": "DevOps",
+    "assignee": "Carlos",
+    "status": "Completado"
+  }
+]

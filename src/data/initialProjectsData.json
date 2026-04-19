@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "name": "Sistema de pagos",
+    "detail": "Integración con bancos"
+  },
+  {
+    "id": "2",
+    "name": "App móvil",
+    "detail": "Nueva versión iOS/Android"
+  }
+]

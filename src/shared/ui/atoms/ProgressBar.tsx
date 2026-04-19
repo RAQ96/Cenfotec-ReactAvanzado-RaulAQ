@@ -1,4 +1,5 @@
-import type { HTMLAttributes } from "react";
+// Server Component — solo renderiza HTML.
+import type { HTMLAttributes } from 'react';
 
 interface ProgressBarProps extends HTMLAttributes<HTMLDivElement> {
   value: number; // 0-100
@@ -6,7 +7,12 @@ interface ProgressBarProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
 }
 
-export function ProgressBar({ value, color = "bg-blue-500", className = "", ...props }: ProgressBarProps) {
+export function ProgressBar({
+  value,
+  color = 'bg-blue-500',
+  className = '',
+  ...props
+}: ProgressBarProps) {
   const percent = Math.max(0, Math.min(100, value));
   return (
     <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`} {...props}>

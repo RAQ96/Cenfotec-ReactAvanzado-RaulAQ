@@ -1,5 +1,6 @@
-import { createContext, useContext, type ReactNode } from "react";
-import { Button } from "@/shared/ui/atoms";
+'use client'; // Client Component — usa useContext
+import { createContext, useContext, type ReactNode } from 'react';
+import { Button } from '@/shared/ui/atoms';
 
 interface ModalContextType {
   open: boolean;
@@ -18,19 +19,20 @@ function Modal({ open, onClose, children }: ModalProps) {
   if (!open) return null;
   return (
     <ModalContext.Provider value={{ open, onClose }}>
-      <div className="fixed inset-0 z-50 pointer-events-none">
-        {children}
-      </div>
+      <div className="fixed inset-0 z-50 pointer-events-none">{children}</div>
     </ModalContext.Provider>
   );
 }
 
 function Content({ children }: { children: ReactNode }) {
   const ctx = useContext(ModalContext);
-  if (!ctx) throw new Error("Modal.Content must be used within Modal");
+  if (!ctx) throw new Error('Modal.Content must be used within Modal');
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-auto">
-      <div className="relative bg-white rounded-lg border-2 border-blue-400 shadow-2xl min-w-[340px] max-w-full pt-8" style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)' }}>
+      <div
+        className="relative bg-white rounded-lg border-2 border-blue-400 shadow-2xl min-w-[340px] max-w-full pt-8"
+        style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)' }}
+      >
         <Button
           aria-label="Cerrar"
           onClick={ctx.onClose}

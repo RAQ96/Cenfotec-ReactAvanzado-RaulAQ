@@ -1,0 +1,61 @@
+/* Kanban dark mode improvements */
+.dark .kanban-col {
+  background: #1e293b !important;
+  color: #f3f4f6 !important;
+  border-color: #334155 !important;
+}
+.dark .kanban-task {
+  background: #0f172a !important;
+  color: #f3f4f6 !important;
+  border-color: #334155 !important;
+}
+.dark .kanban-badge-blue {
+  background: #2563eb !important;
+  color: #dbeafe !important;
+}
+.dark .kanban-badge-green {
+  background: #22c55e !important;
+  color: #dcfce7 !important;
+}
+.dark .kanban-badge-yellow {
+  background: #eab308 !important;
+  color: #fef9c3 !important;
+}
+@import 'tailwindcss';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --header-bg: #2563eb;
+  --header-text: #fff;
+  --footer-bg: #e5e7eb;
+  --footer-text: #52525b;
+}
+
+.dark {
+  --background: #111827;
+  --foreground: #f3f4f6;
+  --header-bg: #0f172a;
+  --header-text: #f3f4f6;
+  --footer-bg: #18181b;
+  --footer-text: #d1d5db;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .animate-kanban-fadein {
+    @apply opacity-0 translate-y-4;
+    animation: kanban-fadein 0.4s ease-in-out forwards;
+  }
+  @keyframes kanban-fadein {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
