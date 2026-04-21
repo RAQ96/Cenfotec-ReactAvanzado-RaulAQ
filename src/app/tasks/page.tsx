@@ -1,9 +1,11 @@
-'use client'; // Client Component — usa useParams
+'use client'; // Client Component — usa useParams y useEffect
 import { TasksKanban } from '@/features/tasks/components/TasksKanban';
-import { useParams } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Tasks() {
-  const { projectId } = useParams();
+  useEffect(() => {
+    document.title = `Todas las tareas`;
+  }, []);
 
-  return <TasksKanban projectId={projectId as string} />;
+  return <TasksKanban projectId={'' as string} />;
 }

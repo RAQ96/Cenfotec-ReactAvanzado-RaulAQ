@@ -3,15 +3,14 @@ import { useState, useEffect } from 'react';
 import { ProjectCardContainer, ProjectSkeleton } from '@/features/projects';
 import { Modal } from '@/shared/ui/organisms';
 import { Button } from '@/shared/ui/atoms';
-import { useLocalStorage, useForm } from '@/hooks';
-import projectsData from '@/data/initialProjectsData.json';
+import { useForm } from '@/hooks';
+import { useProjectsStore } from '@/store';
 import { useRouter } from 'next/navigation';
-import { Project } from '@/features/projects/types';
 
 export default function Projects() {
   const router = useRouter();
   const [isReady, setIsReady] = useState(false);
-  const [projects, setProjects] = useLocalStorage<Project[]>('projects', projectsData as Project[]);
+  const { projects, hasHydrated, addProject, removeProject } = useProjectsStore();
   const [createModalOpen, setCreateModalOpen] = useState(false);
 
   // Formulario para crear proyecto
@@ -26,25 +25,23 @@ export default function Projects() {
       return errors;
     },
     onSubmit: (values) => {
-      setProjects([
-        ...projects,
-        {
-          id: values.id,
-          name: values.nombre,
-          detail: values.descripcion,
-        },
-      ]);
+      addProject({
+        id: values.id,
+        name: values.nombre,
+        detail: values.descripcion,
+      });
       setCreateModalOpen(false);
       form.resetForm();
     },
   });
 
   useEffect(() => {
+    document.title = `Proyectos Devboard`;
     const timer = setTimeout(() => setIsReady(true), 2000);
     return () => clearTimeout(timer);
   }, []);
 
-  if (!isReady) {
+  if (!hasHydrated || !isReady) {
     return <ProjectSkeleton />;
   }
 
@@ -60,7 +57,12 @@ export default function Projects() {
         </Button>
       </div>
       {projects.map((project) => (
-        <ProjectCardContainer key={project.id} project={project} onNavigate={handleViewDetail} />
+        <ProjectCardContainer
+          key={project.id}
+          project={project}
+          onNavigate={handleViewDetail}
+          onDelete={removeProject}
+        />
       ))}
       {/* Modal para crear proyecto */}
       <Modal

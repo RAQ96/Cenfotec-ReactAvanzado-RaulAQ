@@ -6,9 +6,10 @@ import { Project } from '@/features/projects/types';
 type Props = {
   project: Project;
   onNavigate: (id: string) => void;
+  onDelete?: (id: string) => void;
 };
 
-export const ProjectCardContainer = ({ project, onNavigate }: Props) => {
+export const ProjectCardContainer = ({ project, onNavigate, onDelete }: Props) => {
   const { tasks } = useTasks();
   const projectTasks = tasks.filter((t) => t.projectId === project.id);
   const completedTasks = projectTasks.filter((t) => t.status === 'Completado').length;
@@ -27,6 +28,7 @@ export const ProjectCardContainer = ({ project, onNavigate }: Props) => {
       progress={progress}
       taskLabel={taskLabel}
       onViewDetail={handleViewDetail}
+      onDelete={onDelete ? () => onDelete(project.id) : undefined}
     />
   );
 };

@@ -8,5 +8,45 @@
     "id": "2",
     "name": "App móvil",
     "detail": "Nueva versión iOS/Android"
+  },
+  {
+    "id": "3",
+    "name": "Portal web clientes",
+    "detail": "Rediseño UX/UI"
+  },
+  {
+    "id": "4",
+    "name": "API de facturación",
+    "detail": "Automatización de facturas"
+  },
+  {
+    "id": "5",
+    "name": "Dashboard analítico",
+    "detail": "Visualización de métricas"
+  },
+  {
+    "id": "6",
+    "name": "Gestor de inventario",
+    "detail": "Control de stock en tiempo real"
+  },
+  {
+    "id": "7",
+    "name": "Landing institucional",
+    "detail": "Sitio público corporativo"
+  },
+  {
+    "id": "8",
+    "name": "Sistema de soporte",
+    "detail": "Tickets y chat en línea"
+  },
+  {
+    "id": "9",
+    "name": "Módulo de reportes",
+    "detail": "Exportación PDF y Excel"
+  },
+  {
+    "id": "10",
+    "name": "Integración con CRM",
+    "detail": "Sincronización de clientes"
   }
 ]

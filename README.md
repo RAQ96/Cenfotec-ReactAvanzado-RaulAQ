@@ -23,7 +23,11 @@
 - Para el punto B.5 se crea el Context ThemeContext con su respectivo hook useTheme.
 - Para el punto B.6 se usa el AppProviders en el ClientThemeLayout
 
-## Vista actual del proyecto
+## Observaciones entrega tarea 3.
+
+- Ver el archivo OPTIMIZATIONS.md
+
+## Vista final del proyecto
 
 ![alt text](captures/1.png)
 ![alt text](captures/2.png)

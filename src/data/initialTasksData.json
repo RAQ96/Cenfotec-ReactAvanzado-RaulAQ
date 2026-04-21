@@ -1,7 +1,7 @@
 [
   {
     "projectId": "1",
-    "id": "1",
+    "id": "1-1",
     "title": "Diseñar wireframes",
     "priority": "Alta",
     "label": "UX",
@@ -10,7 +10,7 @@
   },
   {
     "projectId": "1",
-    "id": "2",
+    "id": "1-2",
     "title": "Configurar base de datos",
     "priority": "Media",
     "label": "Backend",
@@ -19,7 +19,7 @@
   },
   {
     "projectId": "1",
-    "id": "3",
+    "id": "1-3",
     "title": "Revisar endpoints",
     "priority": "Baja",
     "label": "API",
@@ -28,11 +28,533 @@
   },
   {
     "projectId": "1",
-    "id": "4",
+    "id": "1-4",
     "title": "Deploy inicial",
     "priority": "Alta",
     "label": "DevOps",
     "assignee": "Carlos",
     "status": "Completado"
+  },
+  {
+    "projectId": "1",
+    "id": "1-5",
+    "title": "Documentar procesos",
+    "priority": "Media",
+    "label": "Docs",
+    "assignee": "María",
+    "status": "Backlog"
+  },
+
+  {
+    "projectId": "2",
+    "id": "2-1",
+    "title": "Diseño de interfaz",
+    "priority": "Alta",
+    "label": "UI",
+    "assignee": "Lucía",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "2",
+    "id": "2-2",
+    "title": "Implementar notificaciones",
+    "priority": "Media",
+    "label": "Push",
+    "assignee": "Jorge",
+    "status": "En progreso"
+  },
+  {
+    "projectId": "2",
+    "id": "2-3",
+    "title": "Pruebas de usuario",
+    "priority": "Baja",
+    "label": "QA",
+    "assignee": "Ana",
+    "status": "En revisión"
+  },
+  {
+    "projectId": "2",
+    "id": "2-4",
+    "title": "Optimizar rendimiento",
+    "priority": "Alta",
+    "label": "Performance",
+    "assignee": "Luis",
+    "status": "Completado"
+  },
+  {
+    "projectId": "2",
+    "id": "2-5",
+    "title": "Integrar pagos móviles",
+    "priority": "Media",
+    "label": "Pagos",
+    "assignee": "Carlos",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "2",
+    "id": "2-6",
+    "title": "Actualizar dependencias",
+    "priority": "Baja",
+    "label": "DevOps",
+    "assignee": "Sofía",
+    "status": "En progreso"
+  },
+
+  {
+    "projectId": "3",
+    "id": "3-1",
+    "title": "Crear landing page",
+    "priority": "Alta",
+    "label": "Web",
+    "assignee": "María",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "3",
+    "id": "3-2",
+    "title": "Configurar hosting",
+    "priority": "Media",
+    "label": "Infraestructura",
+    "assignee": "Jorge",
+    "status": "En progreso"
+  },
+  {
+    "projectId": "3",
+    "id": "3-3",
+    "title": "Revisión de accesibilidad",
+    "priority": "Baja",
+    "label": "Accesibilidad",
+    "assignee": "Lucía",
+    "status": "En revisión"
+  },
+  {
+    "projectId": "3",
+    "id": "3-4",
+    "title": "Optimizar imágenes",
+    "priority": "Alta",
+    "label": "SEO",
+    "assignee": "Ana",
+    "status": "Completado"
+  },
+  {
+    "projectId": "3",
+    "id": "3-5",
+    "title": "Agregar sección FAQ",
+    "priority": "Media",
+    "label": "Contenido",
+    "assignee": "Luis",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "3",
+    "id": "3-6",
+    "title": "Integrar chat",
+    "priority": "Baja",
+    "label": "Soporte",
+    "assignee": "Carlos",
+    "status": "En progreso"
+  },
+  {
+    "projectId": "3",
+    "id": "3-7",
+    "title": "Test de carga",
+    "priority": "Alta",
+    "label": "QA",
+    "assignee": "Sofía",
+    "status": "En revisión"
+  },
+
+  {
+    "projectId": "4",
+    "id": "4-1",
+    "title": "Diseñar endpoints",
+    "priority": "Alta",
+    "label": "API",
+    "assignee": "María",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "4",
+    "id": "4-2",
+    "title": "Implementar autenticación",
+    "priority": "Media",
+    "label": "Seguridad",
+    "assignee": "Jorge",
+    "status": "En progreso"
+  },
+  {
+    "projectId": "4",
+    "id": "4-3",
+    "title": "Pruebas unitarias",
+    "priority": "Baja",
+    "label": "QA",
+    "assignee": "Lucía",
+    "status": "En revisión"
+  },
+  {
+    "projectId": "4",
+    "id": "4-4",
+    "title": "Documentar API",
+    "priority": "Alta",
+    "label": "Docs",
+    "assignee": "Ana",
+    "status": "Completado"
+  },
+  {
+    "projectId": "4",
+    "id": "4-5",
+    "title": "Optimizar queries",
+    "priority": "Media",
+    "label": "DB",
+    "assignee": "Luis",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "4",
+    "id": "4-6",
+    "title": "Integrar logs",
+    "priority": "Baja",
+    "label": "DevOps",
+    "assignee": "Carlos",
+    "status": "En progreso"
+  },
+
+  {
+    "projectId": "5",
+    "id": "5-1",
+    "title": "Definir métricas",
+    "priority": "Alta",
+    "label": "Analytics",
+    "assignee": "Sofía",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "5",
+    "id": "5-2",
+    "title": "Configurar dashboard",
+    "priority": "Media",
+    "label": "UI",
+    "assignee": "María",
+    "status": "En progreso"
+  },
+  {
+    "projectId": "5",
+    "id": "5-3",
+    "title": "Integrar Google Analytics",
+    "priority": "Baja",
+    "label": "SEO",
+    "assignee": "Jorge",
+    "status": "En revisión"
+  },
+  {
+    "projectId": "5",
+    "id": "5-4",
+    "title": "Crear widgets",
+    "priority": "Alta",
+    "label": "Componentes",
+    "assignee": "Lucía",
+    "status": "Completado"
+  },
+  {
+    "projectId": "5",
+    "id": "5-5",
+    "title": "Test de usabilidad",
+    "priority": "Media",
+    "label": "QA",
+    "assignee": "Ana",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "5",
+    "id": "5-6",
+    "title": "Exportar reportes",
+    "priority": "Baja",
+    "label": "Exportación",
+    "assignee": "Luis",
+    "status": "En progreso"
+  },
+  {
+    "projectId": "5",
+    "id": "5-7",
+    "title": "Automatizar alertas",
+    "priority": "Alta",
+    "label": "Notificaciones",
+    "assignee": "Carlos",
+    "status": "En revisión"
+  },
+
+  {
+    "projectId": "6",
+    "id": "6-1",
+    "title": "Registrar productos",
+    "priority": "Alta",
+    "label": "Inventario",
+    "assignee": "Sofía",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "6",
+    "id": "6-2",
+    "title": "Actualizar stock",
+    "priority": "Media",
+    "label": "Stock",
+    "assignee": "María",
+    "status": "En progreso"
+  },
+  {
+    "projectId": "6",
+    "id": "6-3",
+    "title": "Integrar código de barras",
+    "priority": "Baja",
+    "label": "Hardware",
+    "assignee": "Jorge",
+    "status": "En revisión"
+  },
+  {
+    "projectId": "6",
+    "id": "6-4",
+    "title": "Optimizar búsquedas",
+    "priority": "Alta",
+    "label": "DB",
+    "assignee": "Lucía",
+    "status": "Completado"
+  },
+  {
+    "projectId": "6",
+    "id": "6-5",
+    "title": "Reportes de inventario",
+    "priority": "Media",
+    "label": "Reportes",
+    "assignee": "Ana",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "6",
+    "id": "6-6",
+    "title": "Alertas de bajo stock",
+    "priority": "Baja",
+    "label": "Alertas",
+    "assignee": "Luis",
+    "status": "En progreso"
+  },
+
+  {
+    "projectId": "7",
+    "id": "7-1",
+    "title": "Diseñar home",
+    "priority": "Alta",
+    "label": "Web",
+    "assignee": "Carlos",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "7",
+    "id": "7-2",
+    "title": "Agregar blog",
+    "priority": "Media",
+    "label": "Contenido",
+    "assignee": "Sofía",
+    "status": "En progreso"
+  },
+  {
+    "projectId": "7",
+    "id": "7-3",
+    "title": "Optimizar SEO",
+    "priority": "Baja",
+    "label": "SEO",
+    "assignee": "María",
+    "status": "En revisión"
+  },
+  {
+    "projectId": "7",
+    "id": "7-4",
+    "title": "Integrar formulario de contacto",
+    "priority": "Alta",
+    "label": "Forms",
+    "assignee": "Jorge",
+    "status": "Completado"
+  },
+  {
+    "projectId": "7",
+    "id": "7-5",
+    "title": "Actualizar imágenes",
+    "priority": "Media",
+    "label": "Media",
+    "assignee": "Lucía",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "7",
+    "id": "7-6",
+    "title": "Test de accesibilidad",
+    "priority": "Baja",
+    "label": "QA",
+    "assignee": "Ana",
+    "status": "En progreso"
+  },
+
+  {
+    "projectId": "8",
+    "id": "8-1",
+    "title": "Configurar sistema de tickets",
+    "priority": "Alta",
+    "label": "Soporte",
+    "assignee": "Luis",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "8",
+    "id": "8-2",
+    "title": "Integrar chat en línea",
+    "priority": "Media",
+    "label": "Chat",
+    "assignee": "Carlos",
+    "status": "En progreso"
+  },
+  {
+    "projectId": "8",
+    "id": "8-3",
+    "title": "Automatizar respuestas",
+    "priority": "Baja",
+    "label": "Bot",
+    "assignee": "Sofía",
+    "status": "En revisión"
+  },
+  {
+    "projectId": "8",
+    "id": "8-4",
+    "title": "Reportes de soporte",
+    "priority": "Alta",
+    "label": "Reportes",
+    "assignee": "María",
+    "status": "Completado"
+  },
+  {
+    "projectId": "8",
+    "id": "8-5",
+    "title": "Encuesta de satisfacción",
+    "priority": "Media",
+    "label": "Encuesta",
+    "assignee": "Jorge",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "8",
+    "id": "8-6",
+    "title": "Actualizar base de conocimientos",
+    "priority": "Baja",
+    "label": "Docs",
+    "assignee": "Lucía",
+    "status": "En progreso"
+  },
+
+  {
+    "projectId": "9",
+    "id": "9-1",
+    "title": "Definir reportes clave",
+    "priority": "Alta",
+    "label": "Reportes",
+    "assignee": "Ana",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "9",
+    "id": "9-2",
+    "title": "Diseñar plantillas PDF",
+    "priority": "Media",
+    "label": "PDF",
+    "assignee": "Luis",
+    "status": "En progreso"
+  },
+  {
+    "projectId": "9",
+    "id": "9-3",
+    "title": "Integrar exportación Excel",
+    "priority": "Baja",
+    "label": "Excel",
+    "assignee": "Carlos",
+    "status": "En revisión"
+  },
+  {
+    "projectId": "9",
+    "id": "9-4",
+    "title": "Automatizar generación de reportes",
+    "priority": "Alta",
+    "label": "Automatización",
+    "assignee": "Sofía",
+    "status": "Completado"
+  },
+  {
+    "projectId": "9",
+    "id": "9-5",
+    "title": "Pruebas de exportación",
+    "priority": "Media",
+    "label": "QA",
+    "assignee": "María",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "9",
+    "id": "9-6",
+    "title": "Optimizar consultas",
+    "priority": "Baja",
+    "label": "DB",
+    "assignee": "Jorge",
+    "status": "En progreso"
+  },
+
+  {
+    "projectId": "10",
+    "id": "10-1",
+    "title": "Sincronizar clientes",
+    "priority": "Alta",
+    "label": "CRM",
+    "assignee": "Lucía",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "10",
+    "id": "10-2",
+    "title": "Integrar API de CRM",
+    "priority": "Media",
+    "label": "API",
+    "assignee": "Ana",
+    "status": "En progreso"
+  },
+  {
+    "projectId": "10",
+    "id": "10-3",
+    "title": "Pruebas de integración",
+    "priority": "Baja",
+    "label": "QA",
+    "assignee": "Luis",
+    "status": "En revisión"
+  },
+  {
+    "projectId": "10",
+    "id": "10-4",
+    "title": "Documentar integración",
+    "priority": "Alta",
+    "label": "Docs",
+    "assignee": "Carlos",
+    "status": "Completado"
+  },
+  {
+    "projectId": "10",
+    "id": "10-5",
+    "title": "Actualizar campos personalizados",
+    "priority": "Media",
+    "label": "Campos",
+    "assignee": "Sofía",
+    "status": "Backlog"
+  },
+  {
+    "projectId": "10",
+    "id": "10-6",
+    "title": "Test de sincronización",
+    "priority": "Baja",
+    "label": "QA",
+    "assignee": "María",
+    "status": "En progreso"
   }
 ]

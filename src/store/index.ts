@@ -1,1 +1,1 @@
-// TO DO
+export { useProjectsStore } from './projects';
