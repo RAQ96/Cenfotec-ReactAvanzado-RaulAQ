@@ -75,8 +75,11 @@ export function AddTaskModal({ open, onClose, onAdd, priorities, assignees }: Ad
         <Modal.Title>Agregar Tarea</Modal.Title>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block mb-1">Título</label>
+            <label htmlFor="addtask-title" className="block mb-1">
+              Título
+            </label>
             <input
+              id="addtask-title"
               name="title"
               value={form.values.title}
               onChange={form.handleChange}
@@ -88,8 +91,11 @@ export function AddTaskModal({ open, onClose, onAdd, priorities, assignees }: Ad
             )}
           </div>
           <div>
-            <label className="block mb-1">Etiqueta</label>
+            <label htmlFor="addtask-label" className="block mb-1">
+              Etiqueta
+            </label>
             <input
+              id="addtask-label"
               name="label"
               value={form.values.label}
               onChange={form.handleChange}
@@ -99,8 +105,11 @@ export function AddTaskModal({ open, onClose, onAdd, priorities, assignees }: Ad
             />
           </div>
           <div>
-            <label className="block mb-1">Prioridad</label>
+            <label htmlFor="addtask-priority" className="block mb-1">
+              Prioridad
+            </label>
             <select
+              id="addtask-priority"
               name="priority"
               value={form.values.priority}
               onChange={form.handleChange}
@@ -119,8 +128,11 @@ export function AddTaskModal({ open, onClose, onAdd, priorities, assignees }: Ad
             )}
           </div>
           <div>
-            <label className="block mb-1">Responsable</label>
+            <label htmlFor="addtask-assignee" className="block mb-1">
+              Responsable
+            </label>
             <select
+              id="addtask-assignee"
               name="assignee"
               value={form.values.assignee}
               onChange={form.handleChange}

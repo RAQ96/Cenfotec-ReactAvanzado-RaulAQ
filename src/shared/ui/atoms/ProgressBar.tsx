@@ -15,7 +15,11 @@ export function ProgressBar({
 }: ProgressBarProps) {
   const percent = Math.max(0, Math.min(100, value));
   return (
-    <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`} {...props}>
+    <div
+      role="progressbar"
+      className={`w-full bg-gray-200 rounded-full h-2 ${className}`}
+      {...props}
+    >
       <div
         className={`${color} h-2 rounded-full transition-all`}
         style={{ width: `${percent}%` }}

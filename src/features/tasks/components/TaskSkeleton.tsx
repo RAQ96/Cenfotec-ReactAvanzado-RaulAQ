@@ -1,7 +1,7 @@
 // Server Component — solo renderiza HTML.
 export function TaskSkeleton() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full p-4">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full p-4" data-testid="task-skeleton">
       {Array.from({ length: 4 }).map((_, i) => (
         <div
           key={i}

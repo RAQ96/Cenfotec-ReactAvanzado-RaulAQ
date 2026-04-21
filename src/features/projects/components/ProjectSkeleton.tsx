@@ -1,7 +1,7 @@
 // Server Component — solo renderiza HTML.
 export function ProjectSkeleton() {
   return (
-    <div className="flex flex-col gap-4 w-full p-4">
+    <div className="flex flex-col gap-4 w-full p-4" data-testid="project-skeleton">
       {Array.from({ length: 3 }).map((_, i) => (
         <div
           key={i}

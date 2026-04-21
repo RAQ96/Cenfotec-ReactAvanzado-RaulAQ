@@ -10,7 +10,7 @@ export default function ProjectTasks() {
 
   useEffect(() => {
     document.title = `Proyecto ${project?.name || 'Proyecto'}`;
-  }, [projectId]);
+  }, [projectId, project]);
 
   return <TasksKanban projectId={projectId as string} />;
 }
