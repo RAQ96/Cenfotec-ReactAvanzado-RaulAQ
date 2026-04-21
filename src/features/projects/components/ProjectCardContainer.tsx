@@ -2,6 +2,7 @@
 import { ProjectCardView } from './ProjectCardView';
 import { useTasks } from '@/features/tasks';
 import { Project } from '@/features/projects/types';
+import React from 'react';
 
 type Props = {
   project: Project;
@@ -9,7 +10,11 @@ type Props = {
   onDelete?: (id: string) => void;
 };
 
-export const ProjectCardContainer = ({ project, onNavigate, onDelete }: Props) => {
+export const ProjectCardContainer = React.memo(function ProjectCardContainer({
+  project,
+  onNavigate,
+  onDelete,
+}: Props) {
   const { tasks } = useTasks();
   const projectTasks = tasks.filter((t) => t.projectId === project.id);
   const completedTasks = projectTasks.filter((t) => t.status === 'Completado').length;
@@ -31,4 +36,4 @@ export const ProjectCardContainer = ({ project, onNavigate, onDelete }: Props) =
       onDelete={onDelete ? () => onDelete(project.id) : undefined}
     />
   );
-};
+});

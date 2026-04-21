@@ -1,5 +1,5 @@
 'use client'; // Client Component — usa varios hooks y maneja eventos de click
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { ProjectCardContainer, ProjectSkeleton } from '@/features/projects';
 import { Modal } from '@/shared/ui/organisms';
 import { Button } from '@/shared/ui/atoms';
@@ -41,13 +41,23 @@ export default function Projects() {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleViewDetail = useCallback(
+    (id: string) => {
+      router.push(`/tasks/${id}`);
+    },
+    [router]
+  );
+
+  const handleDelete = useCallback(
+    (id: string) => {
+      removeProject(id);
+    },
+    [removeProject]
+  );
+
   if (!hasHydrated || !isReady) {
     return <ProjectSkeleton />;
   }
-
-  const handleViewDetail = (id: string) => {
-    router.push(`/tasks/${id}`);
-  };
 
   return (
     <div className="p-6 space-y-4">
@@ -61,7 +71,7 @@ export default function Projects() {
           key={project.id}
           project={project}
           onNavigate={handleViewDetail}
-          onDelete={removeProject}
+          onDelete={handleDelete}
         />
       ))}
       {/* Modal para crear proyecto */}
